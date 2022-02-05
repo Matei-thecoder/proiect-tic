@@ -18,9 +18,9 @@
             <a href="">butt2</a>
             <a href="">butt3</a>
         </div>
-        <h1>Tipuri si feluri de performante scolare</h1>
+        <h1 class="h1">Tipuri si feluri de performante scolare</h1>
     </div>
-    <div class="content">
+    <div class="content reveal">
         <div>
             <h2>titlu</h2>
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
@@ -47,22 +47,17 @@
 </body>
 <style>
     body{
-        height: 1000vh;
+        height: 300vh;
         width:100vw;
     }
     .header{
         /*background:linear-gradient(#3c3ab5, white);*/
         background-color:#3c3ab5 ;
-        height:10%;
+        height:100vh;
         text-align: center;
         margin:auto;
         
-        /*display:flex;
-        align-items: center;
         
-        justify-content: center;
-        flex-direction: column;*/
-
 
 
     }
@@ -116,7 +111,67 @@
     a:hover{
         /*color:#88aeeb;*/
         background-color:#88aeeb ;
+
+    }
+    .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 1;
+    transition: 1s all ease;
+    }
+
+    .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+    }
+    .h1{
+        transform: translateY(-200px);
+        opacity: 1;
+        transition: 1s ease-in;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .h1.active{
+        transform:translateY(0);
+        opacity:1;
     }
     
 </style>
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+    
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+function h1()
+    {
+    var show = document.querySelectorAll(".h1");
+
+    for (var i = 0; i < show.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = show[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            chow[i].classList.add("active");
+        } else {
+            show[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", h1);
+</script>
 </html>
