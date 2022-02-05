@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipuri si feluri de performante scolare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div class="header">
+        <div class="navbar">
+            
+            <a href="">butt1</a>
+            <a href="">butt2</a>
+            <a href="">butt3</a>
+        </div>
         <h1>Tipuri si feluri de performante scolare</h1>
     </div>
     <div class="content">
@@ -37,16 +47,23 @@
 </body>
 <style>
     body{
-        height: 100vh;
+        height: 1000vh;
         width:100vw;
     }
     .header{
-        background-color: aqua;
-        height:20%;
+        /*background:linear-gradient(#3c3ab5, white);*/
+        background-color:#3c3ab5 ;
+        height:10%;
+        text-align: center;
+        margin:auto;
         
-        display:flex;
+        /*display:flex;
         align-items: center;
+        
         justify-content: center;
+        flex-direction: column;*/
+
+
 
     }
     *{
@@ -56,7 +73,11 @@
     }
     h1{
         text-align:center;
-        margin:0 auto ;
+        margin:auto ;
+        margin-top:20%;
+        color:white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 50px;
     }
     #p1{
         text-align:center;
@@ -68,5 +89,34 @@
         padding-top:5%;
         text-align:center;
     }
+    .navbar{
+        width: 100vw;
+        /*align-self: flex-start;*/
+        color:white;
+        font-family: 'Poppins', sans-serif;
+        display:flex;
+        /*flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap:400px;*/
+        display: inline-block;
+        text-decoration: none;
+        overflow: hidden;
+        margin-top: 2%;
+    }
+    a{
+        text-decoration: none;
+        color:white;
+        font-family: 'Poppins', sans-serif;
+        margin:10%;
+        padding:2%;
+        padding-bottom: 2%;
+
+    }
+    a:hover{
+        /*color:#88aeeb;*/
+        background-color:#88aeeb ;
+    }
+    
 </style>
 </html>
