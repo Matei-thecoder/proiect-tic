@@ -11,18 +11,19 @@
 </head>
 <body>
     
-    <div class="header">
+    <div class="header ">
+        
+        <h1 class="h1">Tipuri si feluri de performante scolare</h1>
         <div id="navbar">
             
-            <a href="">BUTT1</a>
-            <a href="">BUTT2</a>
-            <a href="">BUTT3</a>
+            <a href="#1">BUTT1</a>
+            <a href="#2">BUTT2</a>
+            <a href="#3">BUTT3</a>
         </div>
-        <h1 class="h1">Tipuri si feluri de performante scolare</h1>
     </div>
-    <div class="content reveal">
+    <div class="main">
         <section>
-            <div>
+            <div class="content reveal 1" id="1">
                 <h2>titlu</h2>
                 <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
                     iusmod tempor incididunt ut labore et dolore magna aliqua. Diam vulputate
@@ -39,7 +40,7 @@
             </div>
         </section>
         <section>
-            <div>
+            <div class="content reveal 2" id="2">
                 <h2>titlu</h2>
                 <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
                     iusmod tempor incididunt ut labore et dolore magna aliqua. Diam vulputate
@@ -56,7 +57,7 @@
             </div>
         </section>
         <section>
-            <div>
+            <div class="content reveal 3" id="3">
                 <h2>titlu</h2>
                 <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
                     iusmod tempor incididunt ut labore et dolore magna aliqua. Diam vulputate
@@ -73,7 +74,7 @@
             </div>
         </section>
         <section>
-            <div>
+            <div class="content reveal 4">
                 <h2>titlu</h2>
                 <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
                     iusmod tempor incididunt ut labore et dolore magna aliqua. Diam vulputate
@@ -90,7 +91,7 @@
             </div>
         </section>
         <section>
-            <div>
+            <div class="content reveal 5">
                 <h2>titlu</h2>
                 <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
                     iusmod tempor incididunt ut labore et dolore magna aliqua. Diam vulputate
@@ -116,6 +117,7 @@
     body{
         height: 300vh;
         width:100vw;
+        background-color:#3c3ab5 ;
     }
     .header{
         /*background:linear-gradient(#3c3ab5, white);*/
@@ -123,9 +125,9 @@
         height:100vh;
         text-align: center;
         margin:auto;
-        
-        
-
+        opacity: 1;
+        margin-top: 0;
+        padding-top: 10vh;
 
     }
     *{
@@ -136,7 +138,7 @@
     .h1{
         text-align:center;
         margin:auto ;
-        margin-top:65vh;
+        padding-top: 10vh;
         color:white;
         font-family: 'Poppins', sans-serif;
         font-size: 50px;
@@ -155,38 +157,36 @@
     #navbar{
         width: 100vw;
         height: 10vh;
-        /*align-self: flex-start;*/
+       
         color:white;
         font-family: 'Poppins', sans-serif;
-        display:flex;
-        /*flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        column-gap:400px;*/
-        display: inline-block;
+        
         text-decoration: none;
         overflow: hidden;
-       /* margin-top: 0%;*/
+      
         background-color:#3c3ab5;
-        overflow: hidden;
+        /*background-color: #1e1d45;*/
         color:white;
-        padding-top: 1%;
+        
+        position:fixed;
+        bottom: 0;
         
     }
-    a{
+    #navbar a{
         text-decoration: none;
         color:white;
         font-family: 'Poppins', sans-serif;
-        margin:10%;
-        padding:2%;
-        padding-bottom: 3%;
-        font-size: 25px;
-        padding-top: 0.15%;
         
+        
+        font-size: 25px;
+        padding: 14px 16px;
+        text-align: center;
+        display: block;
+        float: left;
 
     }
-    a:hover{
-        /*color:#88aeeb;*/
+    #navbar a:hover{
+        
         background-color:#88aeeb ;
 
     }
@@ -202,30 +202,36 @@
     opacity: 1;
     }
     .h1{
-        transform: translateY(-100px);
+        
         opacity: 1;
         transition: 1s all ease;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: -10vh;
+        padding-top:40vh;
+        padding-left: 0%;
+        position:sticky;
+        text-align: center;
     }
     .h1.active{
-        transform:translateY(0);
+        
         opacity:1;
         text-align:center;
         margin:auto ;
-        padding-top:40vh;
+        
         color:white;
         font-family: 'Poppins', sans-serif;
         font-size: 50px;
     }
-    .sticky {
-    position: fixed;
-    top: 0;
-    left:0;
-    opacity: 1;
-    }
     
+    
+    .main{
+        padding-top: 16px;
+        /*margin-bottom: 30px;*/
+        margin-top: 30px;
+        background-color: white;
+    }
 </style>
 <script>
     function reveal() {
@@ -245,7 +251,7 @@
 }
 
 window.addEventListener("scroll", reveal);
-function h1()
+/*function h1()
     {
     var show = document.querySelectorAll(".h1");
 
@@ -261,21 +267,10 @@ function h1()
     }
   }
 }
-window.addEventListener("scroll", h1);
-window.onscroll = function() {myFunction()};
+window.addEventListener("scroll", h1);*/
+/*window.onscroll = function() {myFunction()};
 
 
-var navbar = document.getElementById("navbar");
-
-
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+*/
 </script>
 </html>
